@@ -106,6 +106,7 @@ div.lazy {
     top: 0;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease;
 }
 
 .sidenav-header {
@@ -158,7 +159,7 @@ div.lazy {
     top: 0;
     background-color: #1c1e22;
     padding: 18px 30px;
-    z-index: 1000;
+    z-index: 900;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -243,10 +244,44 @@ iframe {
     cursor: pointer;
 }
 
+.hamburger {
+    display: none;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    background: #7799CC;
+    color: #e0e0e0;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+}
+
 
 @media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .hamburger.active {
+        transform: translateX(120px);
+    }
+
     .sidenav {
-        width: 110px;
+        width: 120px;
+    }
+
+    .sidenav {
+        transform: translateX(-100%);
+        background-color: #1c1e22;
+        z-index: 998;
+    }
+
+    .sidenav.active {
+        transform: translateX(0);
     }
 
     .sidenav-header {
@@ -275,8 +310,13 @@ iframe {
         padding-right: 3px;
     }
 
+    .year-nav {
+        padding: 18px 25px;
+        margin-left: -5px;
+    }
+
     body {
-        margin-left: 110px;
+        margin-left: 5px;
     }
 
     ul {
