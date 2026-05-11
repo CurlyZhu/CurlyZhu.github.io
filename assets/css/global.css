@@ -260,7 +260,7 @@ iframe {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
     .hamburger {
         display: block;
         transition: transform 0.3s ease;
@@ -271,7 +271,7 @@ iframe {
     }
 
     .sidenav {
-        width: 120px;
+        width: 150px;
     }
 
     .sidenav {

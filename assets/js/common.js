@@ -1,4 +1,3 @@
-// aHR0cHM6Ly9naXRodWIuY29tL2x1b3N0MjYvYWNhZGVtaWMtaG9tZXBhZ2U=
 $(function () {
     lazyLoadOptions = {
         scrollDirection: 'vertical',
